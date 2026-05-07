@@ -1,0 +1,40 @@
+# 基础深度学习库
+torch>=2.1.0
+torchvision>=0.16.0
+numpy==1.26.4
+
+# SAM3 核心依赖
+timm>=1.0.17
+tqdm
+ftfy
+regex
+iopath>=0.1.10
+typing_extensions
+huggingface_hub
+
+# 训练与实验管理
+hydra-core
+submitit
+tensorboard
+torchmetrics
+fvcore
+fairscale
+
+# 数据处理与科学计算
+scipy
+scikit-image
+scikit-learn
+pandas
+matplotlib
+nibabel
+
+# 医学影像处理
+monai>=1.0.0
+
+# 配置文件支持
+pyyaml>=6.0
+
+# 其他实用工具
+zstandard
+einops
+pillow

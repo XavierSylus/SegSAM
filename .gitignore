@@ -1,0 +1,69 @@
+﻿# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Local secrets and credentials
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*secret*
+*token*
+*credential*
+
+# Runtime data and medical volumes
+data/federated_split/
+data/federated_split/**
+data/**/federated_split/
+*.nii
+*.nii.gz
+*.npy
+*.npz
+
+# Model weights and checkpoints
+data/checkpoints/
+data/checkpoints/**
+checkpoints/
+checkpoints/**
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Logs and generated outputs
+logs/
+runs/
+wandb/
+outputs/
+results/
+results/**
+*.log
+
+# Generated local sample tables with private paths
+segmentation_samples.csv
+configs/segmentation_samples.csv
+*_private.csv
+*_local.csv
+
+# Local editor and OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp

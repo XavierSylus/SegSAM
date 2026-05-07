@@ -1,0 +1,48 @@
+﻿{
+    "package_name":  "SegSAM",
+    "purpose":  "Medical image segmentation result reproduction and thesis figure generation",
+    "created_at_local":  "2026-05-06",
+    "main_workflow":  "Regenerate figures from saved training history and existing segmentation outputs without retraining or rerunning inference.",
+    "entrypoints":  {
+                        "figure_generation":  "python scripts/generate_figures_from_existing_outputs.py --config configs/figure_generation_config.json --history \u003chistory.json-or-csv\u003e --segmentation-table \u003csegmentation_samples.csv\u003e --output-dir \u003coutput_dir\u003e",
+                        "optional_training":  "python main.py --config configs/segsam_image_only.yaml"
+                    },
+    "included_source_paths":  [
+                                  "README.md",
+                                  "RESULTS_PROVENANCE.md",
+                                  "SUBMISSION_EXCLUDE_LIST.md",
+                                  "PACKAGE_MANIFEST.json",
+                                  ".gitignore",
+                                  "main.py",
+                                  "requirements.txt",
+                                  "configs/segsam_image_only.yaml",
+                                  "configs/figure_generation_config.json",
+                                  "configs/segmentation_samples.template.csv",
+                                  "scripts/generate_figures_from_existing_outputs.py",
+                                  "src/",
+                                  "data/heterogeneous_dataset_loader.py",
+                                  "README_AUTODL_SEGSAM.md",
+                                  "configs/segsam_autodl.yaml"
+                              ],
+    "runtime_assets_not_for_code_submission":  [
+                                                   "data/federated_split/",
+                                                   "data/checkpoints/sam3.pt",
+                                                   "logs/",
+                                                   "results/regenerated_figures/",
+                                                   "*.nii",
+                                                   "*.nii.gz",
+                                                   "*.pt",
+                                                   "*.pth"
+                                               ],
+    "figure_outputs":  [
+                           "loss_curve.png/svg/pdf",
+                           "metrics_dice_iou.png/svg/pdf",
+                           "metrics_hd95.png/svg/pdf",
+                           "segmentation_results_grid.png/svg/pdf"
+                       ],
+    "notes":  [
+                  "The public thesis workflow is figure reproduction from saved outputs.",
+                  "Training code is retained as an optional compatibility path, not as the main thesis figure workflow.",
+                  "Large runtime assets are intentionally excluded from the code submission boundary."
+              ]
+}

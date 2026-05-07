@@ -1,0 +1,71 @@
+{
+  "output_dir": "results/regenerated_figures",
+  "output": {
+    "formats": ["png", "svg", "pdf"],
+    "dpi": 300
+  },
+  "matplotlib_rc": {
+    "font.family": "DejaVu Sans",
+    "axes.labelsize": 12,
+    "axes.titlesize": 14,
+    "font.size": 10,
+    "pdf.fonttype": 42,
+    "ps.fonttype": 42,
+    "svg.fonttype": "none"
+  },
+  "history": {
+    "path": "results/history/training_history.json",
+    "json_loss_key": "avg_seg_losses",
+    "csv_schema": "auto",
+    "csv_columns": {
+      "round": ["round", "Round", "communication_round", "step"],
+      "loss": ["avg_seg_losses", "seg_loss", "seg loss", "loss", "avg_loss", "train_loss", "Train Loss"],
+      "dice": ["dice", "val_dice", "Dice Score", "Validation Dice"],
+      "iou": ["iou", "val_iou", "IoU Score", "Validation IoU"],
+      "hd95": ["hd95", "val_hd95", "HD95", "Validation HD95"]
+    },
+    "long_columns": {
+      "round": "step",
+      "tag": "tag",
+      "value": "value"
+    },
+    "long_tags": {
+      "loss": ["avg_seg_losses", "seg_loss", "Train/Loss", "Loss/train"],
+      "dice": ["dice", "val_dice", "Val/Dice", "Dice Score"],
+      "iou": ["iou", "val_iou", "Val/IoU", "IoU Score"],
+      "hd95": ["hd95", "val_hd95", "Val/HD95", "HD95"]
+    }
+  },
+  "curve_style": {
+    "loss_figsize": [12, 6],
+    "metric_figsize": [12, 6],
+    "loss_color": "#ff7f0e",
+    "loss_marker": "s",
+    "loss_label": "Seg loss",
+    "dice_color": "blue",
+    "dice_marker": "s",
+    "iou_color": "green",
+    "iou_marker": "^",
+    "hd95_color": "red",
+    "hd95_marker": "x",
+    "line_width": 2.0,
+    "marker_size": 4.0,
+    "grid_alpha": 0.3,
+    "score_ylim": [0.0, 1.0]
+  },
+  "segmentation_grid": {
+    "enabled": true,
+    "sample_table": "",
+    "slice_policy": "require_explicit",
+    "title": "Segmentation Results: FLAIR | GT (WT) | Pred (WT)",
+    "row_titles": ["FLAIR", "GT (WT)", "Pred (WT)"],
+    "n_cols": 4,
+    "title_y": 1.002,
+    "samples": []
+  },
+  "provenance": {
+    "copy_script": true,
+    "copy_config": true,
+    "generation_dir": "generation_scripts"
+  }
+}
