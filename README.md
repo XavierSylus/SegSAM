@@ -186,23 +186,6 @@ The project records or expects the following reproducibility fields:
 
 See `RESULTS_PROVENANCE.md` for the recommended archive structure.
 
-## GitHub Upload Checklist
-
-Before pushing to GitHub or submitting to school, run:
-
-```bash
-git init
-git add --dry-run .
-git status --short
-```
-
-Confirm that the staged file list does not include data volumes, checkpoints, generated arrays, logs, credentials, or private experiment folders. Then commit only the clean source package:
-
-```bash
-git add .
-git commit -m "Prepare SegSAM graduation code release"
-```
-
 ## License
 
 This repository uses the MIT License for the original SegSAM source code included here. The license does not cover external datasets, pretrained checkpoints, SAM3 source code, SAM-Adapter, CreamFL, FedFMS, or other third-party components. Those assets must be obtained and used according to their own licenses and access rules.
